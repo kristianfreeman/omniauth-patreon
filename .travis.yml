@@ -1,0 +1,17 @@
+bundler_args: --without development
+before_install: gem update bundler
+cache: bundler
+env:
+  global:
+    - JRUBY_OPTS="$JRUBY_OPTS --debug"
+language: ruby
+rvm:
+  - 2.2.6
+  - 2.3.3
+  - 2.4.1
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+  fast_finish: true
+sudo: false

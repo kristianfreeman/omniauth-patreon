@@ -7,7 +7,7 @@ Patreon OAuth2 Strategy for OmniAuth 1.x and supports the OAuth 2.0 server-side 
 
 You may view the Patreon API documentation [here](https://www.patreon.com/portal/).
 
-This project is a fork from [omniauth/omniauth-uber](https://github.com/omniauth/omniauth-uber), reconfigured for the Patreon API 🙂
+This project is a fork from [omniauth/omniauth-uber](https://github.com/omniauth/omniauth-uber), reconfigured for the Patreon API. A lot of the inner workings were inspired by Discourse's [discourse-patreon](https://github.com/discourse/discourse-patreon) code - thanks all! On the shoulders of giants, as it were 🙂
 
 ## Installation
 

@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email         = ['kristian@bytesized.xyz']
   s.summary       = 'Patreon strategy for OmniAuth'
   s.description   = 'Patreon strategy for OmniAuth v1.2'
-  s.homepage      = 'https://github.com/tmilewski/omniauth-patreon'
+  s.homepage      = 'https://github.com/signalnerve/omniauth-patreon'
   s.license       = 'MIT'
 
   s.files         = `git ls-files`.split("\n")

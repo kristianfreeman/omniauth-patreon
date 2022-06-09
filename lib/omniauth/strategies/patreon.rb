@@ -22,7 +22,7 @@ module OmniAuth
       option :authorize_options, [:scope]
 
       def raw_info
-        @raw_info ||= access_token.get("https://www.patreon.com/api/oauth2/api/current_user", parse: :json).parsed["body"]
+        @raw_info ||= access_token.get("https://www.patreon.com/api/oauth2/api/current_user", parse: :json).parsed["data"]
       end
 
       credentials do

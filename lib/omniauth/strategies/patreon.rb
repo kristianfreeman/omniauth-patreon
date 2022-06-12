@@ -21,8 +21,13 @@ module OmniAuth
 
       option :authorize_options, [:scope]
 
+      def identity_url
+        user_fields = "about,can_see_nsfw,created,email,first_name,full_name,hide_pledges,image_url,is_email_verified,last_name,like_count,social_connections,thumb_url,url,vanity"
+        "https://www.patreon.com/api/oauth2/v2/identity?fields[user]=#{user_fields}"
+      end
+
       def raw_info
-        @raw_info ||= access_token.get("https://www.patreon.com/api/oauth2/api/current_user", parse: :json).parsed["data"]
+        @raw_info ||= access_token.get(identity_url, parse: :json).parsed["data"]
       end
 
       credentials do
@@ -40,8 +45,7 @@ module OmniAuth
       info do
         {
           email: raw_info["attributes"]["email"],
-          name: raw_info["attributes"]["full_name"],
-          profile_image: raw_info["attributes"]["image_url"]
+          name: raw_info["attributes"]["full_name"]
         }
       end
 

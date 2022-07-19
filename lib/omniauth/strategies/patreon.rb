@@ -11,7 +11,8 @@ module OmniAuth
       option :client_options, {
         site: "https://www.patreon.com",
         authorize_url: "/oauth2/authorize",
-        token_url: "/api/oauth2/token"
+        token_url: "/api/oauth2/token",
+        auth_scheme: :request_body
       }
 
       option :access_token_options, {
